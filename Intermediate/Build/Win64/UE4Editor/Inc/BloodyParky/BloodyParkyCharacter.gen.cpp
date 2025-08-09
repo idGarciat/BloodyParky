@@ -41,6 +41,10 @@ void EmptyLinkFunctionForGeneratedCodeBloodyParkyCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CameraBoom_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseLookUpRate_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseLookUpRate;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -78,9 +82,17 @@ void EmptyLinkFunctionForGeneratedCodeBloodyParkyCharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABloodyParkyCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABloodyParkyCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABloodyParkyCharacter_Statics::NewProp_CameraBoom_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABloodyParkyCharacter_Statics::NewProp_CameraBoom_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABloodyParkyCharacter_Statics::NewProp_BaseLookUpRate_MetaData[] = {
+		{ "Category", "Camera" },
+		{ "ModuleRelativePath", "BloodyParkyCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABloodyParkyCharacter_Statics::NewProp_BaseLookUpRate = { "BaseLookUpRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABloodyParkyCharacter, BaseLookUpRate), METADATA_PARAMS(Z_Construct_UClass_ABloodyParkyCharacter_Statics::NewProp_BaseLookUpRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABloodyParkyCharacter_Statics::NewProp_BaseLookUpRate_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABloodyParkyCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABloodyParkyCharacter_Statics::NewProp_SideViewCameraComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABloodyParkyCharacter_Statics::NewProp_CameraBoom,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABloodyParkyCharacter_Statics::NewProp_BaseLookUpRate,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABloodyParkyCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABloodyParkyCharacter>::IsAbstract,
@@ -109,7 +121,7 @@ void EmptyLinkFunctionForGeneratedCodeBloodyParkyCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABloodyParkyCharacter, 1214392301);
+	IMPLEMENT_CLASS(ABloodyParkyCharacter, 3629960949);
 	template<> BLOODYPARKY_API UClass* StaticClass<ABloodyParkyCharacter>()
 	{
 		return ABloodyParkyCharacter::StaticClass();

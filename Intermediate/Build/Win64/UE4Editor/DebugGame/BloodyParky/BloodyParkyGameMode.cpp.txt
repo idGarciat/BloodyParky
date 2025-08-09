@@ -1,0 +1,15 @@
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\DebugGame\BloodyParky\Definitions.BloodyParky.h
+C:\Users\Admin\Ciencias\BloodyParky\Source\BloodyParky\BloodyParkyGameMode.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\BloodyParkyGameMode.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Source\BloodyParky\BloodyParkyCharacter.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\BloodyParkyCharacter.generated.h

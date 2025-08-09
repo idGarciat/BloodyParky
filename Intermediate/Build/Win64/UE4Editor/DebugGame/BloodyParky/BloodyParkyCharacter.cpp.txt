@@ -1,0 +1,33 @@
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\DebugGame\BloodyParky\Definitions.BloodyParky.h
+C:\Users\Admin\Ciencias\BloodyParky\Source\BloodyParky\BloodyParkyCharacter.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\BloodyParkyCharacter.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringArmComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpringArmComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavigationAvoidanceTypes.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavigationAvoidanceTypes.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Public\AI/RVOAvoidanceInterface.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RVOAvoidanceInterface.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PawnMovementComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/NavMovementComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/Navigation/PathFollowingAgentInterface.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PathFollowingAgentInterface.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavMovementComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PawnMovementComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Interfaces/NetworkPredictionInterface.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NetworkPredictionInterface.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementComponent.generated.h

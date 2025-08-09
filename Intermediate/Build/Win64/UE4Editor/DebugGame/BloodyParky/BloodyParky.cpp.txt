@@ -1,0 +1,2 @@
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\DebugGame\BloodyParky\Definitions.BloodyParky.h
+C:\Users\Admin\Ciencias\BloodyParky\Source\BloodyParky\BloodyParky.h

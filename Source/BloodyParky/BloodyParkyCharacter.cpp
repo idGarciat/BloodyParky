@@ -20,11 +20,12 @@ ABloodyParkyCharacter::ABloodyParkyCharacter()
 	// Create a camera boom attached to the root (capsule)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
-	CameraBoom->SetUsingAbsoluteRotation(true); // Rotation of the character should not affect rotation of boom
+	CameraBoom->SetUsingAbsoluteRotation(false); // Rotation of the character should not affect rotation of boom
 	CameraBoom->bDoCollisionTest = false;
 	CameraBoom->TargetArmLength = 500.f;
 	CameraBoom->SocketOffset = FVector(0.f,0.f,75.f);
 	CameraBoom->SetRelativeRotation(FRotator(0.f,180.f,0.f));
+	CameraBoom->bUsePawnControlRotation = true;
 
 	// Create a camera and attach to boom
 	SideViewCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("SideViewCamera"));
@@ -43,6 +44,37 @@ ABloodyParkyCharacter::ABloodyParkyCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+	BaseLookUpRate = 2.0f;
+	BaseTurnRate = 2.0f;
+}
+
+void ABloodyParkyCharacter::LookUpAtRate(float Rate)
+{
+	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
+}
+
+void ABloodyParkyCharacter::TurnRate(float Rate)
+{
+	//GEngine->AddOnScreenDebugMessage(-1, 1, FColor::Blue, "Funcionando movimiento camara");
+
+	AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
+}
+
+void ABloodyParkyCharacter::ToogleLightSwitch()
+{
+	if (FlashLight == nullptr)
+	{
+		FlashLight = GetWorld()->SpawnActor<AFlashLight>(AFlashLight::StaticClass());
+		FlashLight->AttachFlashLight(this);
+	}
+}
+
+void ABloodyParkyCharacter::TurnOnAndOffLight()
+{
+	if (FlashLight)
+	{
+		FlashLight->TurnOnAndOffLight();
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -57,12 +89,40 @@ void ABloodyParkyCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &ABloodyParkyCharacter::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &ABloodyParkyCharacter::TouchStopped);
+	PlayerInputComponent->BindAction("ToogleFlashLight", IE_Pressed, this, &ABloodyParkyCharacter::ToogleLightSwitch);
+	PlayerInputComponent->BindAction("TurnOnAndOffLight",IE_Pressed, this, &ABloodyParkyCharacter::TurnOnAndOffLight);
+
+}
+
+void ABloodyParkyCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	//Limit the camera
+	APlayerController* PlayerController = Cast<APlayerController>(Controller);
+	if (PlayerController)
+	{
+		//Limit the camera look up and down
+		PlayerController->PlayerCameraManager->ViewPitchMin = -15.0f;
+		PlayerController->PlayerCameraManager->ViewPitchMax = 15.0f; 
+
+		//Limit the camera right and left
+		PlayerController->PlayerCameraManager->ViewYawMin = 160.0f;
+		PlayerController->PlayerCameraManager->ViewYawMax = -160.0f;
+	}
 }
 
 void ABloodyParkyCharacter::MoveRight(float Value)
 {
 	// add movement in that direction
 	AddMovementInput(FVector(0.f,-1.f,0.f), Value);
+	if (Value < 0.0f)
+	{
+		TurnRate(-10);
+	}
+	if(Value > 0.0f) {
+		TurnRate(10);
+	}
 }
 
 void ABloodyParkyCharacter::TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location)

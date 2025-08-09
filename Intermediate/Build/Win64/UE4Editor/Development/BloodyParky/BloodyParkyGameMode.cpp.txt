@@ -1,15 +1,27 @@
-D:\Proyectos\BloodyParky\Intermediate\Build\Win64\UE4Editor\Development\BloodyParky\Definitions.BloodyParky.h
-D:\Proyectos\BloodyParky\Source\BloodyParky\BloodyParkyGameMode.h
-D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-D:\Proyectos\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\BloodyParkyGameMode.generated.h
-D:\Proyectos\BloodyParky\Source\BloodyParky\BloodyParkyCharacter.h
-D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
-D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
-D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
-D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-D:\Proyectos\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\BloodyParkyCharacter.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Development\BloodyParky\Definitions.BloodyParky.h
+C:\Users\Admin\Ciencias\BloodyParky\Source\BloodyParky\BloodyParkyGameMode.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\BloodyParkyGameMode.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Source\BloodyParky\BloodyParkyCharacter.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Source\BloodyParky\WordlsObject/FlashLight/FlashLight.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SpotLightComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/PointLightComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/LocalLightComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/LightComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/LightComponentBase.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\LightComponentBase.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\LightComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\LocalLightComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PointLightComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpotLightComponent.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\FlashLight.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\BloodyParkyCharacter.generated.h

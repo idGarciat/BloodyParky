@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "BloodyParky",
-			"Path": "D:\\Proyectos\\BloodyParky\\Source\\BloodyParky.Target.cs",
+			"Path": "C:\\Users\\Admin\\Ciencias\\BloodyParky\\Source\\BloodyParky.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "BloodyParkyEditor",
-			"Path": "D:\\Proyectos\\BloodyParky\\Source\\BloodyParkyEditor.Target.cs",
+			"Path": "C:\\Users\\Admin\\Ciencias\\BloodyParky\\Source\\BloodyParkyEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

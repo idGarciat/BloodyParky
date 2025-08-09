@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "WordlsObject/FlashLight/FlashLight.h"
 #include "BloodyParkyCharacter.generated.h"
 
 UCLASS(config=Game)
@@ -33,7 +34,7 @@ protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
-
+	virtual void BeginPlay() override;
 
 public:
 	ABloodyParkyCharacter();
@@ -42,4 +43,18 @@ public:
 	FORCEINLINE class UCameraComponent* GetSideViewCameraComponent() const { return SideViewCameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
+	float BaseLookUpRate;
+	float BaseTurnRate;
+
+private:
+	AFlashLight* FlashLight;
+
+	bool bDead = false;
+	void LookUpAtRate(float Eate);
+	void TurnRate(float Rate);
+	void ToogleLightSwitch();
+	void TurnOnAndOffLight();
 };

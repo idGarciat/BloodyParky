@@ -1,0 +1,13 @@
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Development\BloodyParky\Definitions.BloodyParky.h
+C:\Users\Admin\Ciencias\BloodyParky\Source\BloodyParky\WordlsObject\FlashLight\FlashLight.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SpotLightComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/PointLightComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/LocalLightComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/LightComponent.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/LightComponentBase.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\LightComponentBase.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\LightComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\LocalLightComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PointLightComponent.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpotLightComponent.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\FlashLight.generated.h

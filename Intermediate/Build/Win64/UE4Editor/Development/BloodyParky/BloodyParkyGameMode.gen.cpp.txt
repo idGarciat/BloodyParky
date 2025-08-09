@@ -1,9 +1,9 @@
-D:\Proyectos\BloodyParky\Intermediate\Build\Win64\UE4Editor\Development\BloodyParky\Definitions.BloodyParky.h
-D:\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-D:\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\Proyectos\BloodyParky\Source\BloodyParky/BloodyParkyGameMode.h
-D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-D:\Proyectos\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\BloodyParkyGameMode.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Development\BloodyParky\Definitions.BloodyParky.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\Admin\Ciencias\BloodyParky\Source\BloodyParky/BloodyParkyGameMode.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\BloodyParkyGameMode.generated.h
