@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\BloodyParky.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{5FE61C3E-94C2-4616-AD0E-FE3D3C608480}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\BloodyParky.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\BloodyParkyEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{92B36E04-A574-46E4-AF15-6FC886E6C191}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\BloodyParky">
+      <UniqueIdentifier>{029FD87B-F961-40E6-9EBF-84821E8B2553}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\BloodyParky\BloodyParky.Build.cs">
+      <Filter>Source\BloodyParky</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\BloodyParky\BloodyParky.cpp">
+      <Filter>Source\BloodyParky</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BloodyParky\BloodyParky.h">
+      <Filter>Source\BloodyParky</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BloodyParky\BloodyParkyCharacter.cpp">
+      <Filter>Source\BloodyParky</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BloodyParky\BloodyParkyCharacter.h">
+      <Filter>Source\BloodyParky</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BloodyParky\BloodyParkyGameMode.cpp">
+      <Filter>Source\BloodyParky</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BloodyParky\BloodyParkyGameMode.h">
+      <Filter>Source\BloodyParky</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

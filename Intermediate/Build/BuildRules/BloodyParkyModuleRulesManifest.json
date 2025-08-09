@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Proyectos\\BloodyParky\\Source\\BloodyParky\\BloodyParky.Build.cs",
+		"D:\\Proyectos\\BloodyParky\\Source\\BloodyParky.Target.cs",
+		"D:\\Proyectos\\BloodyParky\\Source\\BloodyParkyEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}

@@ -1,0 +1,15 @@
+D:\Proyectos\BloodyParky\Intermediate\Build\Win64\UE4Editor\Development\BloodyParky\Definitions.BloodyParky.h
+D:\Proyectos\BloodyParky\Source\BloodyParky\BloodyParkyGameMode.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+D:\Proyectos\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\BloodyParkyGameMode.generated.h
+D:\Proyectos\BloodyParky\Source\BloodyParky\BloodyParkyCharacter.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+D:\Proyectos\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\BloodyParkyCharacter.generated.h
