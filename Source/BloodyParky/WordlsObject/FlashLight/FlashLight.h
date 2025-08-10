@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "Components/SceneComponent.h"
 #include "Components/SpotLightComponent.h"
+#include "Components/SphereComponent.h"
+#include "Blueprint/UserWidget.h"
 #include "FlashLight.generated.h"
 
 UCLASS()
@@ -23,16 +25,18 @@ protected:
 
 private:
 	bool isLightOn = false;
-
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(Category = Mesh, EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	class UStaticMeshComponent* MeshComponent;
+
+	class UStaticMesh* Mesh;
 
 	UPROPERTY(Category = Mesh, EditAnywhere, meta = (AllowPrivateAccess = "true"))
-	//USceneComponent
-	class UStaticMeshComponent* MeshComponent;
-	class UStaticMesh* Mesh;
 	class USpotLightComponent* LightComponent;
+
 	void AttachFlashLight(AActor* Player);
+
 	void TurnOnAndOffLight();
 };

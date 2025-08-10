@@ -2,6 +2,8 @@
 
 
 #include "FlashLight.h"
+#include <BloodyParky/BloodyParkyCharacter.h>
+#include <Kismet/GameplayStatics.h>
 
 // Sets default values
 AFlashLight::AFlashLight()
@@ -13,13 +15,22 @@ AFlashLight::AFlashLight()
 	Mesh = staticMesh.Object;
 	MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("FlashLightMesh"));
 	RootComponent = MeshComponent;
-
+	
 	LightComponent = CreateDefaultSubobject<USpotLightComponent>(TEXT("SpotLightComponent"));
 	LightComponent->SetupAttachment(RootComponent);
 
+	//LightComponent = CreateDefaultSubobject<USpotLightComponent>(TEXT("SpotLightComponent"));
+	//LightComponent->SetupAttachment(MeshComponent, FName("Light_Socket"));
+	FVector LigthSocketLocation = MeshComponent->GetSocketLocation("Light_Socket");
+	FRotator LigthSocketRotation = MeshComponent->GetSocketRotation("Light_Socket");
+	LightComponent->SetRelativeLocationAndRotation(LigthSocketLocation, FRotator(0.0f, -180.0f, 0.0f));
+
 	MeshComponent->SetStaticMesh(Mesh);
-	MeshComponent->SetWorldRotation(FRotator(0.0f, -180.0f, 0.0f));
-	MeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	MeshComponent->SetWorldRotation(FRotator(0.0f, 0.0f, 0.0f));
+	//MeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	MeshComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	MeshComponent->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Overlap);
+	MeshComponent->SetGenerateOverlapEvents(true);
 	MeshComponent->SetRelativeScale3D(FVector(5.0f, 5.0f, 5.0f));
 }
 
@@ -27,10 +38,6 @@ AFlashLight::AFlashLight()
 void AFlashLight::BeginPlay()
 {
 	Super::BeginPlay();
-	FVector LigthSocketLocation = MeshComponent->GetSocketLocation("Light_Socket");
-	FRotator LigthSocketRotation = MeshComponent->GetSocketRotation("Light_Socket");
-	LightComponent->SetRelativeLocationAndRotation(LigthSocketLocation, LigthSocketRotation);
-
 	TurnOnAndOffLight();
 }
 
@@ -46,6 +53,7 @@ void AFlashLight::AttachFlashLight(AActor* Player)
 	if (SkeletalMeshComp && SkeletalMeshComp->DoesSocketExist(FName("hand_r_Socket")))
 	{
 		this->AttachToComponent(SkeletalMeshComp, FAttachmentTransformRules::SnapToTargetIncludingScale, FName("hand_r_Socket"));
+		this->MeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		GEngine->AddOnScreenDebugMessage(-1, 1, FColor::Red, TEXT("Attached the flashlight to hand_r_Socket"));
 	}
 	else
@@ -69,5 +77,3 @@ void AFlashLight::TurnOnAndOffLight()
 		isLightOn = false;
 	}
 }
-
-

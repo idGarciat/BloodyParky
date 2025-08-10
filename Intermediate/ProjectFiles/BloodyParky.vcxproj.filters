@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\BloodyParky.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C642F38B-F2E6-4E69-B98C-75A265C5D47A}</UniqueIdentifier>
+      <UniqueIdentifier>{4CF6CAD2-B2B3-4098-8FC9-4C9B96F93971}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BloodyParky.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{FB98EFD9-2AF1-4330-BD85-272FB78B8005}</UniqueIdentifier>
+      <UniqueIdentifier>{675BAD61-437C-4E9E-8297-B14BB8FEA358}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\BloodyParky">
-      <UniqueIdentifier>{8CA771E5-56CB-4A33-BBA5-3FFEB59797E3}</UniqueIdentifier>
+      <UniqueIdentifier>{1067C479-F0E9-421E-91D8-6C476F1EAE22}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BloodyParky\BloodyParky.Build.cs">
       <Filter>Source\BloodyParky</Filter>
@@ -56,10 +56,19 @@
       <Filter>Source\BloodyParky</Filter>
     </ClInclude>
     <Filter Include="Source\BloodyParky\WordlsObject">
-      <UniqueIdentifier>{EB11CC80-BA47-4500-9435-A79ACD29D782}</UniqueIdentifier>
+      <UniqueIdentifier>{093E0779-E5CC-4323-801D-3DA395D8814D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\BloodyParky\WordlsObject\Bone">
+      <UniqueIdentifier>{C9E629B0-3C9D-496B-B44A-E656F8C0A073}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\BloodyParky\WordlsObject\Bone\Bone.cpp">
+      <Filter>Source\BloodyParky\WordlsObject\Bone</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BloodyParky\WordlsObject\Bone\Bone.h">
+      <Filter>Source\BloodyParky\WordlsObject\Bone</Filter>
+    </ClInclude>
     <Filter Include="Source\BloodyParky\WordlsObject\FlashLight">
-      <UniqueIdentifier>{453A0206-C96C-49AD-B9FA-0EB816D3790A}</UniqueIdentifier>
+      <UniqueIdentifier>{AADEBC68-7DC9-4796-9558-0C82C9CE149E}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\BloodyParky\WordlsObject\FlashLight\FlashLight.cpp">
       <Filter>Source\BloodyParky\WordlsObject\FlashLight</Filter>

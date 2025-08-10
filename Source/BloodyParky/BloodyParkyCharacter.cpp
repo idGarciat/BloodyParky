@@ -6,6 +6,7 @@
 #include "Components/InputComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include <Kismet/GameplayStatics.h>
 
 ABloodyParkyCharacter::ABloodyParkyCharacter()
 {
@@ -16,6 +17,14 @@ ABloodyParkyCharacter::ABloodyParkyCharacter()
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
+
+	InteractionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("InteractionSphere"));
+	InteractionSphere->SetupAttachment(RootComponent);
+	InteractionSphere->InitSphereRadius(5.0f); // Rango de detección
+	InteractionSphere->SetCollisionProfileName("Trigger");
+	InteractionSphere->SetGenerateOverlapEvents(true);
+	InteractionSphere->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	InteractionSphere->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Overlap);
 
 	// Create a camera boom attached to the root (capsule)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
@@ -62,18 +71,19 @@ void ABloodyParkyCharacter::TurnRate(float Rate)
 
 void ABloodyParkyCharacter::ToogleLightSwitch()
 {
-	if (FlashLight == nullptr)
+	if (FlashLightItem != nullptr && bPlayerInRange)
 	{
-		FlashLight = GetWorld()->SpawnActor<AFlashLight>(AFlashLight::StaticClass());
-		FlashLight->AttachFlashLight(this);
+		//AFlashLight* FlashLight = GetWorld()->SpawnActor<AFlashLight>(AFlashLight::StaticClass());
+		FlashLightItem->AttachFlashLight(this);
 	}
 }
 
 void ABloodyParkyCharacter::TurnOnAndOffLight()
 {
-	if (FlashLight)
+	if (FlashLightItem)
 	{
-		FlashLight->TurnOnAndOffLight();
+		GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, TEXT("Turning light"));
+		FlashLightItem->TurnOnAndOffLight();
 	}
 }
 
@@ -91,7 +101,6 @@ void ABloodyParkyCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 	PlayerInputComponent->BindTouch(IE_Released, this, &ABloodyParkyCharacter::TouchStopped);
 	PlayerInputComponent->BindAction("ToogleFlashLight", IE_Pressed, this, &ABloodyParkyCharacter::ToogleLightSwitch);
 	PlayerInputComponent->BindAction("TurnOnAndOffLight",IE_Pressed, this, &ABloodyParkyCharacter::TurnOnAndOffLight);
-
 }
 
 void ABloodyParkyCharacter::BeginPlay()
@@ -110,7 +119,42 @@ void ABloodyParkyCharacter::BeginPlay()
 		PlayerController->PlayerCameraManager->ViewYawMin = 160.0f;
 		PlayerController->PlayerCameraManager->ViewYawMax = -160.0f;
 	}
+
+	InteractionSphere->OnComponentBeginOverlap.AddDynamic(this, &ABloodyParkyCharacter::OnOverlapBegin);
+	InteractionSphere->OnComponentEndOverlap.AddDynamic(this, &ABloodyParkyCharacter::OnOverlapEnd);
+
+	if (PickUpWidgetClass)
+	{
+		PickUpWidget = CreateWidget<UUserWidget>(GetWorld(), PickUpWidgetClass);
+	}
 }
+
+void ABloodyParkyCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if (OtherActor && OtherActor != this)
+	{
+		if (AFlashLight* FlashLight = Cast<AFlashLight>(OtherActor))
+		{
+			FlashLightItem = FlashLight;
+			bPlayerInRange = true;
+			ShowPickUp(true);
+		}
+	}
+}
+
+void ABloodyParkyCharacter::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	if (OtherActor && OtherActor != this)
+	{
+		if (AFlashLight* FlashLight = Cast<AFlashLight>(OtherActor))
+		{
+			//FlashLightItem = nullptr;
+			bPlayerInRange = false;
+			ShowPickUp(false);
+		}
+	}
+}
+
 
 void ABloodyParkyCharacter::MoveRight(float Value)
 {
@@ -125,9 +169,29 @@ void ABloodyParkyCharacter::MoveRight(float Value)
 	}
 }
 
+void ABloodyParkyCharacter::ShowPickUp(bool bShow)
+{
+	APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+	if (bShow)
+	{
+		if (PickUpWidget && !PickUpWidget->IsInViewport())
+		{
+			PickUpWidget->AddToViewport();
+		}
+		PC->SetInputMode(FInputModeGameOnly());
+	}
+	else
+	{
+		if (PickUpWidget && PickUpWidget->IsInViewport())
+		{
+			PickUpWidget->RemoveFromParent();
+		}
+	}
+
+}
+
 void ABloodyParkyCharacter::TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location)
 {
-	// jump on any touch
 	Jump();
 }
 

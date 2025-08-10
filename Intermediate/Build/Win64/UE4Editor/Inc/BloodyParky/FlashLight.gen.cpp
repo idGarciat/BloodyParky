@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeFlashLight() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_BloodyParky();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USpotLightComponent_NoRegister();
 // End Cross Module References
 	void AFlashLight::StaticRegisterNativesAFlashLight()
 	{
@@ -36,6 +37,10 @@ void EmptyLinkFunctionForGeneratedCodeFlashLight() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshComponent_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LightComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_LightComponent;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -54,15 +59,23 @@ void EmptyLinkFunctionForGeneratedCodeFlashLight() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlashLight_Statics::NewProp_MeshComponent_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Mesh" },
-		{ "Comment", "//USceneComponent\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "WordlsObject/FlashLight/FlashLight.h" },
-		{ "ToolTip", "USceneComponent" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFlashLight_Statics::NewProp_MeshComponent = { "MeshComponent", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlashLight, MeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFlashLight_Statics::NewProp_MeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFlashLight_Statics::NewProp_MeshComponent_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlashLight_Statics::NewProp_LightComponent_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Mesh" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "WordlsObject/FlashLight/FlashLight.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFlashLight_Statics::NewProp_LightComponent = { "LightComponent", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlashLight, LightComponent), Z_Construct_UClass_USpotLightComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFlashLight_Statics::NewProp_LightComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFlashLight_Statics::NewProp_LightComponent_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFlashLight_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlashLight_Statics::NewProp_MeshComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlashLight_Statics::NewProp_LightComponent,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AFlashLight_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AFlashLight>::IsAbstract,
@@ -91,7 +104,7 @@ void EmptyLinkFunctionForGeneratedCodeFlashLight() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFlashLight, 827271233);
+	IMPLEMENT_CLASS(AFlashLight, 834984558);
 	template<> BLOODYPARKY_API UClass* StaticClass<AFlashLight>()
 	{
 		return AFlashLight::StaticClass();
