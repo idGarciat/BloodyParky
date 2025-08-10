@@ -8,10 +8,11 @@
 #include "Components/SpotLightComponent.h"
 #include "Components/SphereComponent.h"
 #include "Blueprint/UserWidget.h"
+#include "../Item/IItem.h"
 #include "FlashLight.generated.h"
 
 UCLASS()
-class BLOODYPARKY_API AFlashLight : public AActor
+class BLOODYPARKY_API AFlashLight : public AActor, public IIItem
 {
 	GENERATED_BODY()
 	
@@ -36,7 +37,6 @@ public:
 	UPROPERTY(Category = Mesh, EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	class USpotLightComponent* LightComponent;
 
-	void AttachFlashLight(AActor* Player);
-
-	void TurnOnAndOffLight();
+	virtual void AttachItem(AActor* Player) override;
+	virtual void ExecuteAction(AActor* Player) override;
 };

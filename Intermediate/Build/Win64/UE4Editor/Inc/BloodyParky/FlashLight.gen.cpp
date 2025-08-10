@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeFlashLight() {}
 	UPackage* Z_Construct_UPackage__Script_BloodyParky();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpotLightComponent_NoRegister();
+	BLOODYPARKY_API UClass* Z_Construct_UClass_UIItem_NoRegister();
 // End Cross Module References
 	void AFlashLight::StaticRegisterNativesAFlashLight()
 	{
@@ -42,6 +43,7 @@ void EmptyLinkFunctionForGeneratedCodeFlashLight() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_LightComponent;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -77,6 +79,9 @@ void EmptyLinkFunctionForGeneratedCodeFlashLight() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlashLight_Statics::NewProp_MeshComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlashLight_Statics::NewProp_LightComponent,
 	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AFlashLight_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UIItem_NoRegister, (int32)VTABLE_OFFSET(AFlashLight, IIItem), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AFlashLight_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AFlashLight>::IsAbstract,
 	};
@@ -87,11 +92,11 @@ void EmptyLinkFunctionForGeneratedCodeFlashLight() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_AFlashLight_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_AFlashLight_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AFlashLight_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AFlashLight_Statics::Class_MetaDataParams))
 	};
@@ -104,7 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeFlashLight() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFlashLight, 834984558);
+	IMPLEMENT_CLASS(AFlashLight, 3309899991);
 	template<> BLOODYPARKY_API UClass* StaticClass<AFlashLight>()
 	{
 		return AFlashLight::StaticClass();

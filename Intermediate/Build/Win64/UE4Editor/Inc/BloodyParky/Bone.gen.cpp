@@ -17,6 +17,9 @@ void EmptyLinkFunctionForGeneratedCodeBone() {}
 	BLOODYPARKY_API UClass* Z_Construct_UClass_ABone();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_BloodyParky();
+	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USpotLightComponent_NoRegister();
+	BLOODYPARKY_API UClass* Z_Construct_UClass_UIItem_NoRegister();
 // End Cross Module References
 	void ABone::StaticRegisterNativesABone()
 	{
@@ -31,6 +34,16 @@ void EmptyLinkFunctionForGeneratedCodeBone() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LightComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_LightComponent;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -44,6 +57,31 @@ void EmptyLinkFunctionForGeneratedCodeBone() {}
 		{ "ModuleRelativePath", "WordlsObject/Bone/Bone.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABone_Statics::NewProp_MeshComponent_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Mesh" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "WordlsObject/Bone/Bone.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABone_Statics::NewProp_MeshComponent = { "MeshComponent", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABone, MeshComponent), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABone_Statics::NewProp_MeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABone_Statics::NewProp_MeshComponent_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABone_Statics::NewProp_LightComponent_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Mesh" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "WordlsObject/Bone/Bone.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABone_Statics::NewProp_LightComponent = { "LightComponent", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABone, LightComponent), Z_Construct_UClass_USpotLightComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABone_Statics::NewProp_LightComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABone_Statics::NewProp_LightComponent_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABone_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABone_Statics::NewProp_MeshComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABone_Statics::NewProp_LightComponent,
+	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ABone_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UIItem_NoRegister, (int32)VTABLE_OFFSET(ABone, IIItem), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABone_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABone>::IsAbstract,
 	};
@@ -53,12 +91,12 @@ void EmptyLinkFunctionForGeneratedCodeBone() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
-		nullptr,
+		Z_Construct_UClass_ABone_Statics::PropPointers,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ABone_Statics::PropPointers),
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_ABone_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ABone_Statics::Class_MetaDataParams))
 	};
@@ -71,7 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeBone() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABone, 3449942807);
+	IMPLEMENT_CLASS(ABone, 2690952199);
 	template<> BLOODYPARKY_API UClass* StaticClass<ABone>()
 	{
 		return ABone::StaticClass();

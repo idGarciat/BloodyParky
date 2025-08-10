@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "WordlsObject/FlashLight/FlashLight.h"
 #include "Components/SphereComponent.h"
+#include "WordlsObject/Item/IItem.h"
 #include "BloodyParkyCharacter.generated.h"
 
 UCLASS(config=Game)
@@ -69,12 +70,16 @@ public:
                       UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 private:
-	AFlashLight* FlashLightItem;
 
+	IIItem* Item;
 	bool bPlayerInRange = false;
 	void LookUpAtRate(float Eate);
 	void TurnRate(float Rate);
-	void ToogleLightSwitch();
+	void PickUpItem();
+
+	//Actions of items
 	void TurnOnAndOffLight();
+	void AtackBone();
+
 	void ShowPickUp(bool bShow);
 };

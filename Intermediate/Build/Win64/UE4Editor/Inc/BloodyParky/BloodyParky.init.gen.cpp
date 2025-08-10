@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeBloodyParky_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x77E1F1E6,
-				0xDDE46415,
+				0x5E89FC94,
+				0xFDDF35FB,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

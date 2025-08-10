@@ -38,7 +38,7 @@ AFlashLight::AFlashLight()
 void AFlashLight::BeginPlay()
 {
 	Super::BeginPlay();
-	TurnOnAndOffLight();
+	ExecuteAction(nullptr);
 }
 
 // Called every frame
@@ -47,7 +47,7 @@ void AFlashLight::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-void AFlashLight::AttachFlashLight(AActor* Player)
+void AFlashLight::AttachItem(AActor* Player)
 {
 	USkeletalMeshComponent* SkeletalMeshComp = Player->FindComponentByClass<USkeletalMeshComponent>();
 	if (SkeletalMeshComp && SkeletalMeshComp->DoesSocketExist(FName("hand_r_Socket")))
@@ -62,7 +62,7 @@ void AFlashLight::AttachFlashLight(AActor* Player)
 	}
 }
 
-void AFlashLight::TurnOnAndOffLight()
+void AFlashLight::ExecuteAction(AActor* Player)
 {
 	if (LightComponent)
 	{

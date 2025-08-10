@@ -7,6 +7,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include <Kismet/GameplayStatics.h>
+#include "WordlsObject/Bone/Bone.h"
 
 ABloodyParkyCharacter::ABloodyParkyCharacter()
 {
@@ -69,21 +70,36 @@ void ABloodyParkyCharacter::TurnRate(float Rate)
 	AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
 }
 
-void ABloodyParkyCharacter::ToogleLightSwitch()
+void ABloodyParkyCharacter::PickUpItem()
 {
-	if (FlashLightItem != nullptr && bPlayerInRange)
+	if (Item != nullptr && bPlayerInRange)
 	{
+		//AActor* CasteItem = Cast<AActor>(Item);
+
 		//AFlashLight* FlashLight = GetWorld()->SpawnActor<AFlashLight>(AFlashLight::StaticClass());
-		FlashLightItem->AttachFlashLight(this);
+		Item->AttachItem(this);
 	}
 }
 
 void ABloodyParkyCharacter::TurnOnAndOffLight()
 {
-	if (FlashLightItem)
+	if (Item)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, TEXT("Turning light"));
-		FlashLightItem->TurnOnAndOffLight();
+		if (AFlashLight* FlashLight = Cast<AFlashLight>(Item))
+		{
+			FlashLight->ExecuteAction(this);
+		}
+	}
+}
+
+void ABloodyParkyCharacter::AtackBone()
+{
+	if (Item)
+	{
+		if (ABone* Bone = Cast<ABone>(Item))
+		{
+			Bone->ExecuteAction(this);
+		}
 	}
 }
 
@@ -99,8 +115,9 @@ void ABloodyParkyCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &ABloodyParkyCharacter::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &ABloodyParkyCharacter::TouchStopped);
-	PlayerInputComponent->BindAction("ToogleFlashLight", IE_Pressed, this, &ABloodyParkyCharacter::ToogleLightSwitch);
-	PlayerInputComponent->BindAction("TurnOnAndOffLight",IE_Pressed, this, &ABloodyParkyCharacter::TurnOnAndOffLight);
+	PlayerInputComponent->BindAction("ToogleFlashLight", IE_Pressed, this, &ABloodyParkyCharacter::PickUpItem);
+	PlayerInputComponent->BindAction("TurnOnAndOffLight", IE_Pressed, this, &ABloodyParkyCharacter::TurnOnAndOffLight);
+	PlayerInputComponent->BindAction("BoneAtack",IE_Pressed, this, &ABloodyParkyCharacter::AtackBone);
 }
 
 void ABloodyParkyCharacter::BeginPlay()
@@ -133,9 +150,9 @@ void ABloodyParkyCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, 
 {
 	if (OtherActor && OtherActor != this)
 	{
-		if (AFlashLight* FlashLight = Cast<AFlashLight>(OtherActor))
+		if (IIItem* ItemPickUp = Cast<IIItem>(OtherActor))
 		{
-			FlashLightItem = FlashLight;
+			Item = ItemPickUp;
 			bPlayerInRange = true;
 			ShowPickUp(true);
 		}
@@ -146,7 +163,7 @@ void ABloodyParkyCharacter::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AA
 {
 	if (OtherActor && OtherActor != this)
 	{
-		if (AFlashLight* FlashLight = Cast<AFlashLight>(OtherActor))
+		if (IIItem* ItemPickUp = Cast<IIItem>(OtherActor))
 		{
 			//FlashLightItem = nullptr;
 			bPlayerInRange = false;

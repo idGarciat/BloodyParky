@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\BloodyParky.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{4CF6CAD2-B2B3-4098-8FC9-4C9B96F93971}</UniqueIdentifier>
+      <UniqueIdentifier>{A02B957D-0C50-489E-B7A1-3E9EF2CC81DC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BloodyParky.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{675BAD61-437C-4E9E-8297-B14BB8FEA358}</UniqueIdentifier>
+      <UniqueIdentifier>{C87608CD-075E-45F1-9E37-5F7D8F6F068E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\BloodyParky">
-      <UniqueIdentifier>{1067C479-F0E9-421E-91D8-6C476F1EAE22}</UniqueIdentifier>
+      <UniqueIdentifier>{DD7D6BD0-6F91-4089-9E0D-D082D6C71F8C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BloodyParky\BloodyParky.Build.cs">
       <Filter>Source\BloodyParky</Filter>
@@ -56,10 +56,10 @@
       <Filter>Source\BloodyParky</Filter>
     </ClInclude>
     <Filter Include="Source\BloodyParky\WordlsObject">
-      <UniqueIdentifier>{093E0779-E5CC-4323-801D-3DA395D8814D}</UniqueIdentifier>
+      <UniqueIdentifier>{C9AB09B4-1616-4DCB-8519-11E779CA05E5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\BloodyParky\WordlsObject\Bone">
-      <UniqueIdentifier>{C9E629B0-3C9D-496B-B44A-E656F8C0A073}</UniqueIdentifier>
+      <UniqueIdentifier>{EAE56DAF-2244-4283-88B6-643862F05B83}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\BloodyParky\WordlsObject\Bone\Bone.cpp">
       <Filter>Source\BloodyParky\WordlsObject\Bone</Filter>
@@ -67,14 +67,32 @@
     <ClInclude Include="..\..\Source\BloodyParky\WordlsObject\Bone\Bone.h">
       <Filter>Source\BloodyParky\WordlsObject\Bone</Filter>
     </ClInclude>
+    <Filter Include="Source\BloodyParky\WordlsObject\Door">
+      <UniqueIdentifier>{C84C4FA6-C477-42CE-AE96-9062B5AD9C4D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\BloodyParky\WordlsObject\Door\Door.cpp">
+      <Filter>Source\BloodyParky\WordlsObject\Door</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BloodyParky\WordlsObject\Door\Door.h">
+      <Filter>Source\BloodyParky\WordlsObject\Door</Filter>
+    </ClInclude>
     <Filter Include="Source\BloodyParky\WordlsObject\FlashLight">
-      <UniqueIdentifier>{AADEBC68-7DC9-4796-9558-0C82C9CE149E}</UniqueIdentifier>
+      <UniqueIdentifier>{B1D3BC34-1FE1-4E7B-B25C-B979FF400E4E}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\BloodyParky\WordlsObject\FlashLight\FlashLight.cpp">
       <Filter>Source\BloodyParky\WordlsObject\FlashLight</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\BloodyParky\WordlsObject\FlashLight\FlashLight.h">
       <Filter>Source\BloodyParky\WordlsObject\FlashLight</Filter>
+    </ClInclude>
+    <Filter Include="Source\BloodyParky\WordlsObject\Item">
+      <UniqueIdentifier>{CCD9D70A-929D-4BC7-9E51-0B7596D29059}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\BloodyParky\WordlsObject\Item\IItem.cpp">
+      <Filter>Source\BloodyParky\WordlsObject\Item</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BloodyParky\WordlsObject\Item\IItem.h">
+      <Filter>Source\BloodyParky\WordlsObject\Item</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

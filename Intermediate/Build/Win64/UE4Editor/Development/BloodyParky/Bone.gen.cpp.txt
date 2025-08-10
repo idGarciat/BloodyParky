@@ -2,4 +2,6 @@ C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Developme
 C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Users\Admin\Programs\Unreal Engine\4.27.2\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 C:\Users\Admin\Ciencias\BloodyParky\Source\BloodyParky/WordlsObject/Bone/Bone.h
+C:\Users\Admin\Ciencias\BloodyParky\Source\BloodyParky\WordlsObject\Bone\../Item/IItem.h
+C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\IItem.generated.h
 C:\Users\Admin\Ciencias\BloodyParky\Intermediate\Build\Win64\UE4Editor\Inc\BloodyParky\Bone.generated.h
